@@ -1,0 +1,239 @@
+@mobile: ~"only screen and (max-width: 667px)";
+@desktop: ~"only screen and (min-width: 668px)";
+
+* {
+	-webkit-font-smoothing: antialiased;
+}
+
+::selection {
+	
+}
+
+html, body {
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+	margin: 0;
+	
+	#status {
+	    font-size: 28px;
+		padding-bottom: 20px;
+		
+		&.done {
+		    width: 100%;
+		    height: 190px;
+		    text-align: center;
+		    background: #5ED321;
+		    color: #FFFFFF;
+		    line-height: 200px;
+		    font-weight: 700;
+		    font-size: 46px;
+		}
+	}
+	
+	#progress {
+		display: none;
+	    width: 100%;
+	    height: 50px;
+	    background: #F0F0F0;
+	}
+	
+	.bar {
+	    height: 50px;
+	    background: #4A90E2;
+		transition: width 1s;
+	}
+	
+	.loading-placeholder {
+		color: #DADADA;
+	}
+	
+	h1 {
+	    font-size: 24px;
+		padding: 20px;
+		text-transform: uppercase;
+		letter-spacing: 10px;
+		background: black;
+		color: white;
+		text-align: center;
+		margin: 0;
+	}
+	
+	#content {
+		padding: 0 20px;
+		margin-bottom: 100px;
+	}
+	
+	h3 {
+	    font-size: 32px;
+		padding-bottom: 25px;
+		margin-bottom: 40px;
+		border-bottom: 3px solid #000;
+	}
+	
+	label {
+	    font-size: 28px;
+		
+		span.text {
+			width: 120px;
+			display: inline-block;
+		}
+	}
+	
+	input, textarea {
+		outline: none;
+		
+		&:focus {
+			border-color: #000000!important;
+		}
+	}
+	
+	input[type="text"] {
+	    font-size: 28px;
+		padding: 10px 10px 12px 10px;
+		border: 2px solid rgba(0, 0, 0, 0.5);
+		background: rgba(0, 0, 0, 0.04);
+		width: ~"calc(100% - 164px)";
+		margin-left: 20px;
+	    height: 40px;
+	}
+	
+	label#fileupload-label {
+	    vertical-align: 18px;
+	}
+	
+	label#fileupload {
+	  position: relative;
+	  overflow: hidden;
+	  background: #2e2e2e;
+	  color: #FFFFFF;
+      padding: 10px 20px;
+      border-radius: 10px;
+	  margin-left: 12px;
+      width: 300px;
+      display: inline-block;
+      text-align: center;
+	  
+	  &:active {
+		  opacity: 0.5;
+	  }
+	}
+	
+	input#fileupload {
+	  display: block;
+	  position: absolute;
+	  top: 0;
+	  right: 0;
+	  opacity: 0;
+	  font-size: 100px;
+	  filter: alpha(opacity=0);
+	  cursor: pointer;
+	  height: 70px;
+	}
+	
+	#fileupload-filename {
+		font-size: 28px;
+	    padding-bottom: 20px;
+	    display: inline-block;
+		vertical-align: 18px;
+		height: 0px;
+	    overflow: visible;
+		
+		&.visible {
+			margin-left: 15px;
+			margin-right: 15px;
+		}
+	}
+	
+	input[type="date"] {
+		font-size: 28px;
+	    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+	    margin-left: 20px;
+	    padding: 10px 10px 12px 10px;
+	    border: 2px solid rgba(0, 0, 0, 0.5);
+		background: rgba(0, 0, 0, 0.04);
+		width: 316px;
+	    height: 40px;
+	}
+	
+	textarea {
+		font-size: 28px;
+	    padding: 10px 10px 12px 10px;
+	    border: 2px solid rgba(0, 0, 0, 0.5);
+		background: rgba(0, 0, 0, 0.04);
+	    width: ~"calc(100% - 24px)";
+	    display: block;
+	    margin-top: 25px;
+	    height: 150px;
+		resize: vertical;
+		min-height: 150px;
+	}
+
+	input[type="submit"] {
+	    font-size: 28px;
+		padding: 10px 10px 12px 10px;
+		background: #4A90E2;
+		color: #FFFFFF;
+		padding: 10px 20px;
+		border-radius: 10px;
+		border: none;
+		cursor: pointer;
+		outline: none;
+		width: 100%;
+		height: 80px;
+		font-weight: 700;
+		margin-top: 50px;
+		
+		&:active {
+			opacity: 0.5;
+		}
+	}
+	
+	table {
+		width: 100%;
+		cell-spacing: 0;
+		border: 1px solid #DADADA;
+	    font-size: 22px;
+		
+		th {
+			padding: 10px;
+			border-right: 1px solid #DADADA;
+			border-bottom: 1px solid #DADADA;
+			background: #DADADA;
+			text-align: left;
+			
+			&:first-child {
+				text-align: center;
+			}
+			
+			&:last-child {
+				border-right: 0;
+			}
+		}
+		
+		td {
+			padding: 10px;
+			border-bottom: 1px solid #DADADA;
+			border-left: 0;
+			border-top: 0;
+			border-right: 1px solid #DADADA;
+			
+			&:last-child {
+				border-right: 0;
+			}
+		}
+		
+		tr {
+			&:last-child td {
+				border-bottom: 0;
+			}
+		}
+	}
+	
+	@media @mobile {
+		
+	}
+	
+	@media @desktop {
+	
+	}
+
+}
